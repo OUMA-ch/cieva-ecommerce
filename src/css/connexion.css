@@ -1,0 +1,134 @@
+/* diri lien dyl had fichier f connexion.php
+okk 
+ chnou kadir db cccc*/
+/* Style des formulaires */
+
+.img-container {
+    text-align: center;
+}
+.img-container img.logo{
+    height: 120px;
+}
+.form-container {
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form .errors {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-4);
+    border-radius: 5px;
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    list-style-position: inside;
+}
+
+.form-container .input-container {
+    color: #555;
+    margin-top: 1rem;
+    transition: all .3s;
+}
+
+.form-container .input-container.input-focus {
+    background-color: var(--color-1);
+    color: var(--color-2);
+    padding: 10px;
+    border-radius: 5px;
+    scale: 1.05; 
+}
+.form-container .input-container.input-focus label {
+    margin-bottom: 5px;
+}
+.form-container .input-container .info-message {
+    display: none;
+}
+.form-container .input-container.input-focus .info-message {
+    display: block;
+}
+.form-container .input-container .info-message ul {
+    list-style-position: inside;
+}
+
+.form-container label {
+    display: block;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    font-size: var(--font-size-sm);
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.form-container .input-container span {
+    color: #d9534f;
+}
+
+.form-container .links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-container .links  a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: var(--font-size-sm);
+    position: relative;
+}
+.form-container .links  a i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateX(calc(-100% - 3px))  translateY(-50%);
+    overflow: hidden;
+    max-width: 0;
+    transition: max-width .5s;
+}
+.form-container .links  a:hover {
+    color: #0056b3;
+}
+.form-container .links  a:hover i {
+    max-width: 100px;
+}
+/* Bouton de soumission (ajoutez-le si nécessaire) */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

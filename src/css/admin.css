@@ -1,0 +1,289 @@
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  min-width: max-content;
+  max-width: max-content;
+  height: 100vh;
+  overflow: auto;
+}
+header .profile {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--color-4);
+  gap: 10px;
+  padding: 10px;
+  width: 330px;
+}
+header .profile .img-container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+header .profile .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .profile .name {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-2);
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+header .profile .email {
+  font-size: var(--font-size-xs);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+header nav {
+  padding: 20px 10px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+}
+
+header li {
+  width: 100%;
+}
+header a {
+  display: block;
+  background-color: var(--color-4);
+  text-decoration: none;
+  padding: 7px 10px;
+  width: 100%;
+}
+header a:hover {
+  background-color: var(--color-5);
+}
+
+/* Content & Sections */
+.content-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+.content {
+  min-height: 100%;
+}
+
+section {
+  padding: 10px;
+}
+
+/* Welcome Section */
+section.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+  gap: 10px;
+}
+
+section.welcome .img-container {
+  width: 400px;
+  max-width: 100%;
+}
+section.welcome img {
+  width: 100%;
+  object-fit: cover;
+}
+section.welcome h1 {
+  font-size: var(--font-size-h1);
+}
+section.welcome .stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+}
+section.welcome ul {
+  list-style: none;
+}
+
+section.add-product .input-container,
+section.add-brand .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+section.add-product span,
+section.add-brand span {
+  color: red;
+}
+section h1 {
+  font-size: var(--font-size-h1);
+}
+
+/* Style global pour le formulaire */
+section form {
+  max-width: 600px;
+  padding: 20px;
+}
+
+section .input-container {
+  margin-bottom: 15px;
+}
+
+section label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+section input[type="text"],
+section input[type="number"],
+section textarea,
+section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+section input[type="text"]:focus,
+section input[type="number"]:focus,
+section textarea:focus,
+section select:focus {
+  outline: none;
+  border-color: var(--color-4);
+}
+
+section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+section input[type="file"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid var(--color-grey);
+}
+
+/* Style pour le bouton de soumission */
+section button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--color-4);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+section button:hover {
+  background-color: var(--color-1);
+}
+
+/* Ajout de styles pour les liens dans le formulaire */
+section a {
+  color: var(--color-4);
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* Style de message d'erreur ou d'absence de marques et catégories */
+section div p {
+  font-size: 14px;
+  color: #555;
+}
+
+section div p a {
+  font-size: 14px;
+  color: #2196F3;
+}
+
+section div p a:hover {
+  text-decoration: underline;
+}
+
+/* Style global pour le tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style pour les liens dans la colonne Actions */
+td a {
+  display: block;
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+td a:hover {
+  background-color: #45a049;
+}
+
+/* Style pour les liens de suppression (en rouge) */
+td a.delete {
+  background-color: #f44336;
+}
+
+td a.delete :hover {
+  background-color: #e53935;
+}
+
+/* Style pour le tableau lorsqu'il n'y a pas de données */
+table.empty tbody {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 20px;
+}

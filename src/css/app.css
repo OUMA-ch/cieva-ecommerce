@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Masquer les barres de défilement (sans désactiver le défilement)*/
+/* Chrome, Edge, Safari */
+/* *::-webkit-scrollbar {
+  display: none; 
+} */
+/* Firefox */
+/* * {
+  scrollbar-width: none; 
+} */
+
+html,body {
+  color: var(--color-black);
+}
+
+a {
+  color: inherit;
+}
+
+/* les variables global de application */
+:root {
+  /* Les couleurs */
+  /* Couleurs principales */
+  --color-1: #40000d;
+  --color-2: #ffdcb1;
+  --color-3: #cfad8f;
+  --color-4: #bd0026;
+  --color-5: #e5383b;
+
+
+  /* Couleurs complémentaires */
+  --color-accent: #f48c06; /* Orange vif */
+  --color-accent-light: #ffba08; /* Jaune vif */
+  --color-accent-dark: #9a5800; /* Marron clair */
+  --color-accent-pink: #d6336c; /* Rose vif */
+  --color-accent-purple: #7209b7; /* Violet */
+  --color-accent-teal: #20c997; /* Vert émeraude clair */
+  --color-accent-green: #40bf55; /* Vert herbe */
+  --color-accent-brown: #6f4518; /* Marron terre */
+
+  /* Couleurs neutres */
+  --color-white: #ffffff; /* Blanc */
+  --color-light-grey: #f8f9fa; /* Gris très clair */
+  --color-grey: #adb5bd; /* Gris moyen */
+  --color-dark-grey: #495057; /* Gris foncé */
+  --color-black: #000000; /* Noir */
+
+  /* Couleurs de fond */
+  --color-bg-light: #f5f5f5; /* Fond clair */
+  --color-bg-dark: #212529; /* Fond sombre */
+  --color-bg-muted: #e9ecef; /* Fond neutre */
+
+  /* Couleurs de texte */
+  --color-text-dark: #343a40; /* Texte sombre */
+  --color-text-light: #ffffff; /* Texte clair */
+  --color-text-muted: #6c757d; /* Texte neutre */
+  --color-text-warning: #e85d04; /* Texte orange d'alerte */
+
+  /* Couleurs supplémentaires */
+  --color-info: #3a86ff; /* Bleu d'information */
+  --color-success: #38b000; /* Vert de validation */
+  --color-warning: #f77f00; /* Orange d'avertissement */
+  --color-error: #d00000; /* Rouge d'erreur */
+  --color-hover-primary: #9b1316; /* Couleur survol principal */
+  --color-hover-secondary: #09617a; /* Couleur survol secondaire */
+
+  /* font-sizes */
+  /* Tailles de police principales */
+  --font-size-xxs: 0.625rem; /* 10px */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px (taille de texte par défaut) */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  --font-size-5xl: 3rem;     /* 48px */
+  --font-size-6xl: 3.75rem;  /* 60px */
+  --font-size-7xl: 4.5rem;   /* 72px */
+
+  /* Tailles spécifiques */
+  --font-size-h1: 2.25rem;  /* Utilisé pour les titres H1 (36px) */
+  --font-size-h2: 1.875rem; /* Utilisé pour les titres H2 (30px) */
+  --font-size-h3: 1.5rem;   /* Utilisé pour les titres H3 (24px) */
+  --font-size-h4: 1.25rem;  /* Utilisé pour les titres H4 (20px) */
+  --font-size-h5: 1.125rem; /* Utilisé pour les titres H5 (18px) */
+  --font-size-h6: 1rem;     /* Utilisé pour les titres H6 (16px) */
+  --font-size-caption: 0.75rem; /* Texte de légende (12px) */
+  --font-size-button: 0.875rem; /* Texte des boutons (14px) */
+
+  /* box shadows */
+  /* Box shadows légers (idéal pour les hover ou fonds discrets) */
+  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  /* Box shadows pour des éléments en relief modéré (cartes, sections) */
+  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --box-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.05);
+
+  /* Box shadows intenses pour éléments clés (modals, hover intenses) */
+  --box-shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+  /* Effets de hover ou focus */
+  --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --box-shadow-focus: 0 0 0 3px rgba(186, 24, 27, 0.4); /* Highlight avec couleur principale */
+
+  /* Box shadows intérieurs (insets) */
+  --box-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --box-shadow-inset-lg: inset 0 5px 10px rgba(0, 0, 0, 0.12);
+
+  /* Échelle de base */
+  --z-index-0: 0; /* Éléments de base (par défaut) */
+  --z-index-10: 10; /* Fond ou éléments secondaires */
+  --z-index-20: 20; /* Éléments au-dessus des fonds */
+  --z-index-30: 30; /* Éléments principaux (cartes, sections importantes) */
+  --z-index-40: 40; /* Navigation (headers, sidebars) */
+  --z-index-50: 50; /* Modals ou dialogues */
+  --z-index-60: 60; /* Notifications, tooltips */
+}
+
+
+.info-message {
+  color: var(--color-info);
+  padding: 5px 10px;
+  border: 2px solid var(--color-info);
+  font-size: var(--font-size-xs);
+  margin: 5px 0px;
+}
