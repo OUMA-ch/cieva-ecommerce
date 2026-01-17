@@ -1,0 +1,45 @@
+# =========================
+# Fichiers système
+# =========================
+.DS_Store       # Mac
+Thumbs.db       # Windows
+desktop.ini
+
+# =========================
+# Fichiers IDE / éditeurs
+# =========================
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# =========================
+# Dossiers et fichiers de build
+# =========================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# =========================
+# Fichiers de configuration locaux (SENSIBLES)
+# =========================
+/back/config.php        # Si tu stockes les identifiants MySQL ici
+.env
+*.log
+
+# =========================
+# Fichiers temporaires
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# Backups & archives
+# =========================
+*.zip
+*.rar
+*.7z
+*backup*
